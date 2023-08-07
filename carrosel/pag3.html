@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalação do Servidor Web</title>
+    <link rel="stylesheet" href="carrosel css/pag3.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Instalando um Servidor Web</h1>
+            <ul class="toolbar">
+                <li><a href="../index.html">Voltar</a></li>
+                <li><a href="../toolbar/contato.html">Fale conosco</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Instalação do Servidor Web</h1>
+        <p>
+            Nesta página, vamos explicar passo a passo como instalar um servidor web em seu sistema operacional. 
+            Um servidor web é responsável por hospedar e servir páginas e aplicativos web.
+        </p>
+
+        <h2>Passo 1: Atualização do Sistema Operacional</h2>
+        <pre><code>// atualização do SO
+sudo apt update
+sudo apt upgrade</code></pre>
+        <p>
+            Antes de iniciar a instalação do servidor web, é importante garantir que seu sistema operacional esteja atualizado. 
+            O comando "sudo apt update" atualiza a lista de pacotes disponíveis, enquanto o comando "sudo apt upgrade" 
+            atualiza os pacotes instalados em seu sistema operacional.
+        </p>
+
+        <h2>Passo 2: Instalação do Servidor Apache</h2>
+        <pre><code>// instalação do Apache 
+sudo apt install apache2 apache2-doc apache2-utils
+sudo systemctl status apache2</code></pre>
+        <p>
+            O servidor web Apache é uma das opções mais populares e amplamente utilizadas. O comando "sudo apt install apache2 apache2-doc apache2-utils" 
+            instala o servidor web Apache e seus utilitários relacionados. Uma vez concluída a instalação, você pode verificar o status do Apache 
+            com o comando "sudo systemctl status apache2".
+        </p>
+
+        <h2>Passo 3: Configuração do Firewall</h2>
+        <pre><code>// instalação do firewall
+sudo apt install ufw
+sudo systemctl status ufw</code></pre>
+        <p>
+            Para garantir a segurança do servidor web, é recomendável configurar um firewall. O comando "sudo apt install ufw" instala o Uncomplicated Firewall (UFW) 
+            em seu sistema operacional. Uma vez instalado, você pode verificar o status do UFW com o comando "sudo systemctl status ufw".
+        </p>
+
+        <h2>Passo 4: Liberação do Apache no Firewall</h2>
+        <pre><code>// liberação do Apache no Firewall
+sudo ufw allow 'Apache Full'</code></pre>
+        <p>
+            Agora, é necessário permitir que o tráfego HTTP e HTTPS chegue ao servidor Apache através do firewall. 
+            O comando "sudo ufw allow 'Apache Full'" abre as portas necessárias (80 para HTTP e 443 para HTTPS) no firewall 
+            para permitir o acesso ao servidor Apache.
+
+        <h2>Conclusão</h2>
+        <p>
+            Parabéns! Você concluiu com sucesso a instalação do servidor web Apache e configurou o firewall para permitir o acesso a ele. 
+            Agora você pode começar a hospedar e servir páginas e aplicativos web em seu servidor.
+        </p>
+    </main>
+
+    <footer>
+        <div class="container">
+            Todos os direitos reservados Gabriel Felipe Alves Bandoch&copy; 2023
+        </div>
+    </footer>
+</body>
+</html>
